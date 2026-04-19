@@ -18,7 +18,8 @@ title: Home - Shaun Chong
 <h2 class="font-bold mb-5">Recent Posts</h2>
 
 <ul class="flex flex-col gap-2">
-  {% for item in collections.post | reverse | slice(0, 3) %}
+  {% assign recentPosts = collections.post | reverse | slice: 0, 10 %}
+  {% for item in recentPosts %}
     <li class="block">
       <a class="nonchalant flex justify-between items-center" href="{{ item.url }}">
         <span class="block">{{ item.data.title }}</span>
