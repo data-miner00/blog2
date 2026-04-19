@@ -2,6 +2,7 @@ var postcss = require("postcss");
 var tailwindcss = require("@tailwindcss/postcss");
 var fs = require("fs");
 var path = require("path");
+var { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.on("eleventy.before", async () => {
@@ -36,6 +37,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
   });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   return {
     templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
