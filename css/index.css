@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 a:not(.nonchalant) {
   @apply text-blue-500 underline;
