@@ -1,5 +1,11 @@
 ---
 layout: en.liquid
+title: Home
 ---
-
 <h1>This is Homepage</h1>
+
+{% for item in collections.post %}
+  <a href="{{ item.url }}">{{ item.data.title }}</a>
+{% else %}
+  The collection is empty.
+{% endfor %}
