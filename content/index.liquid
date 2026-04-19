@@ -1,11 +1,31 @@
 ---
 layout: base.liquid
-title: Home
+title: Home - Shaun Chong
 ---
-<h1 class="text-3xl font-bold">This is Homepage</h1>
+<p class="mb-7">
+  I'm a software developer based in Malaysia. This is my playground for non-technical writing. You can find my technical
+  posts <a target="_blank" href="{{ metadata.author.urls.tech }}">here</a>.
+</p>
+<p class="mb-7">I'm also a language learner, so you'll find posts in different languages.</p>
 
-{% for item in collections.post | reverse | slice(0, 3) %}
-  <a href="{{ item.url }}">{{ item.data.title }}</a>
-{% else %}
-  The collection is empty.
-{% endfor %}
+<p class="mb-16">
+  <a href="mailto:{{ metadata.author.email }}">Message me</a> if you'd like to chat about languages, writing, or
+  anything interesting. You can also find me on
+  <a target="_blank" href="{{ metadata.author.urls.github }}">GitHub</a> and
+  <a target="_blank" href="{{ metadata.author.urls.x }}">X</a>.
+</p>
+
+<h2 class="font-bold mb-5">Recent Posts</h2>
+
+<ul class="flex flex-col gap-2">
+  {% for item in collections.post | reverse | slice(0, 3) %}
+    <li class="block">
+      <a class="nonchalant flex justify-between items-center" href="{{ item.url }}">
+        <span class="block">{{ item.data.title }}</span>
+        <span class="block text-gray-500">{{ item.data.date | dayMonth }}</span>
+      </a>
+    </li>
+  {% else %}
+    <li>The collection is empty.</li>
+  {% endfor %}
+</ul>

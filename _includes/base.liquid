@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-      Document
       {{ title }}
     </title>
 
     <link rel="stylesheet" href="/styles/index.css">
   </head>
   <body>
-    <div class="mx-auto max-w-lg">
+    <div class="mx-auto max-w-160">
+      {% include 'partials/header.liquid' %}
+
       {{ content }}
 
-      <footer>
-        <p>
-          <em
-            >Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em
-          >
-        </p>
-      </footer>
+      {% include 'partials/footer.liquid' %}
     </div>
   </body>
 </html>

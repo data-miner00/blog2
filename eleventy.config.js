@@ -22,6 +22,17 @@ module.exports = function (eleventyConfig) {
     fs.writeFileSync(tailwindOutputPath, result.css);
   });
 
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addFilter("dayMonth", (dateString) => {
+    const formatter = new Intl.DateTimeFormat("en-GB", {
+      day: "numeric", // '1'
+      month: "short", // 'Jan'
+    });
+
+    return formatter.format(new Date(dateString));
+  });
+
   return {
     templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
 
