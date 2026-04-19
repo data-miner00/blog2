@@ -2,9 +2,9 @@
 layout: base.liquid
 title: Home
 ---
-<h1>This is Homepage</h1>
+<h1 class="text-3xl font-bold">This is Homepage</h1>
 
-{% for item in collections.post %}
+{% for item in collections.post | reverse | slice(0, 3) %}
   <a href="{{ item.url }}">{{ item.data.title }}</a>
 {% else %}
   The collection is empty.

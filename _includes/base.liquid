@@ -11,14 +11,16 @@
     <link rel="stylesheet" href="/styles/index.css">
   </head>
   <body>
-    {{ content }}
+    <div class="mx-auto max-w-lg">
+      {{ content }}
 
-    <footer>
-      <p>
-        <em
-          >Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em
-        >
-      </p>
-    </footer>
+      <footer>
+        <p>
+          <em
+            >Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em
+          >
+        </p>
+      </footer>
+    </div>
   </body>
 </html>

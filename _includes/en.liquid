@@ -1,26 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Document
-      {{ title }}
-    </title>
+---
+layout: base.liquid
+---
+{{ content }}
 
-    <link rel="stylesheet" href="/styles/index.css">
-  </head>
-  <body>
-    {{ content }}
+<a href="/">Home</a>
 
-    {% assign previousPost = collections.post | getPreviousCollectionItem: page %}
-    {% assign nextPost = collections.post | getNextCollectionItem: page %}
-    {% if previousPost -%}
-      Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-    {%- endif %}
-    <br>
-    {% if nextPost -%}
-      Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-    {%- endif %}
-  </body>
-</html>
+{% assign previousPost = collections.post | getPreviousCollectionItem: page %}
+{% assign nextPost = collections.post | getNextCollectionItem: page %}
+{% if previousPost -%}
+  Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+{%- endif %}
+<br>
+{% if nextPost -%}
+  Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+{%- endif %}
