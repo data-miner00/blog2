@@ -33,6 +33,10 @@ module.exports = function (eleventyConfig) {
     return formatter.format(new Date(dateString));
   });
 
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
+  });
+
   return {
     templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
 
