@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {{ title }}
+    </title>
+
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+  <body>
+    <div class="mx-auto max-w-160">
+      <header class="mt-10 mb-12">
+        <div class="flex justify-between items-center">
+          <a class="nonchalant " href="/">
+            <h1 class="text-xl font-bold">Shaun Chong</h1>
+          </a>
+          <nav class="flex gap-4 items-center">
+            <a href="/">Inicio</a>
+            <a href="/posts">Publicaciones</a>
+            <a href="/feed.xml">Feed</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="mb-8 prose">
+        {{ content }}
+      </div>
+
+      {% assign previousPost = collections.post | getPreviousCollectionItem: page %}
+      {% assign nextPost = collections.post | getNextCollectionItem: page %}
+      {% if previousPost -%}
+        <p>
+          Anterior: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        </p>
+      {%- endif %}
+      {% if nextPost -%}
+        <p>
+          Siguiente: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        </p>
+      {%- endif %}
+
+      <footer class="mt-12 border-t border-solid border-gray-500 py-6">
+        <div class="flex justify-between">
+          <p>
+            <em
+              >Construido con <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em
+            >
+          </p>
+
+          <p>
+            &copy; {% year %}
+            {{ metadata.author.name }}
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
