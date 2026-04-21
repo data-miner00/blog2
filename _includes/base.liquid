@@ -1,5 +1,6 @@
+{% assign i18n = languages[lang] %}
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,51 @@
   </head>
   <body>
     <div class="mx-auto max-w-160">
-      {% include 'partials/header.liquid' %}
+      <header class="mt-10 mb-12">
+        <div class="flex justify-between items-center">
+          <a class="nonchalant " href="/">
+            <h1 class="text-xl font-bold">Shaun Chong</h1>
+          </a>
+          <nav class="flex gap-4 items-center">
+            <a href="/">{{ i18n.home }}</a>
+            <a href="/posts">{{ i18n.posts }}</a>
+            <a href="/feed.xml">{{ i18n.feed }}</a>
+          </nav>
+        </div>
+      </header>
 
-      {{ content }}
+      <div class="mb-8 prose">
+        {{ content }}
+      </div>
 
-      {% include 'partials/footer.liquid' %}
+      {% assign previousPost = collections.post | getPreviousCollectionItem: page %}
+      {% assign nextPost = collections.post | getNextCollectionItem: page %}
+      {% if previousPost -%}
+        <p>
+          {{ i18n.previous }}: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        </p>
+      {%- endif %}
+      {% if nextPost -%}
+        <p>
+          {{ i18n.next }}: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        </p>
+      {%- endif %}
+
+      <footer class="mt-12 border-t border-solid border-gray-500 py-6">
+        <div class="flex justify-between">
+          <p>
+            <em>
+              {{ i18n.builtWith }}
+              <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em
+            >
+          </p>
+
+          <p>
+            &copy; {% year %}
+            {{ metadata.author.name }}
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
