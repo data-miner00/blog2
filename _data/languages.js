@@ -51,8 +51,8 @@ module.exports = {
     home: "主页",
     posts: "帖子",
     feed: "订阅源",
-    previous: "前",
-    next: "后",
+    previous: "上一篇",
+    next: "下一篇",
     builtWith: "搭建于",
   },
 };
