@@ -55,4 +55,12 @@ module.exports = {
     next: "下一篇",
     builtWith: "搭建于",
   },
+  ja: {
+    home: "ホーム",
+    posts: "投稿",
+    feed: "フィード",
+    previous: "先",
+    next: "次",
+    builtWith: "で構築",
+  },
 };

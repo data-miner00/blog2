@@ -1,3 +1,3 @@
 # Blog
 
-My blogs for non-technical stuffs.
+My blog and writings.
