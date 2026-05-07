@@ -26,12 +26,25 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addFilter("dayMonth", (dateString) => {
-    const formatter = new Intl.DateTimeFormat("en-GB", {
-      day: "numeric", // '1'
-      month: "short", // 'Jan'
-    });
+    const date = new Date(dateString);
+    const now = new Date();
 
-    return formatter.format(new Date(dateString));
+    if (date.getFullYear() === now.getFullYear()) {
+      const formatter = new Intl.DateTimeFormat("en-GB", {
+        day: "numeric", // '1'
+        month: "short", // 'Jan'
+      });
+
+      return formatter.format(date);
+    } else {
+      const formatter = new Intl.DateTimeFormat("en-GB", {
+        day: "numeric", // '1'
+        month: "short", // 'Jan',
+        year: "numeric",
+      });
+
+      return formatter.format(date);
+    }
   });
 
   eleventyConfig.addPassthroughCopy({
