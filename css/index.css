@@ -2,5 +2,10 @@
 @plugin "@tailwindcss/typography";
 
 a:not(.nonchalant) {
-  @apply text-blue-500 underline;
+  @apply transition-colors underline-offset-2 decoration-black/15 underline text-black/50 inline-block ease-in-out duration-300 hover:text-black;
+}
+
+body {
+  background: rgb(245 245 244);
+  color: rgba(0 0 0 / 0.8);
 }
