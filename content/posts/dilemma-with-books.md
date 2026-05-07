@@ -1,5 +1,5 @@
 ---
-layout: pt
+lang: pt
 title: Tenho um dilema com os livros
 tags: post
 date: 2025-11-30

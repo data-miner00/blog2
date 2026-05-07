@@ -1,5 +1,5 @@
 ---
-layout: ko
+lang: ko
 title: Parit Jawa 일으키는 감정
 tags: post
 date: 2024-01-31

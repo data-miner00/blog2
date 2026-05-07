@@ -1,5 +1,5 @@
 ---
-layout: zh
+lang: zh
 title: 一场奇怪的梦
 tags: post
 date: 2022-12-26

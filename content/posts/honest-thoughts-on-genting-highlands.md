@@ -1,5 +1,5 @@
 ---
-layout: en
+lang: en
 title: Honest Thoughts on Genting Highlands
 tags: post
 date: 2022-06-06
