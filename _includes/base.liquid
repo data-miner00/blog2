@@ -13,18 +13,7 @@
   </head>
   <body>
     <div class="mx-auto max-w-160">
-      <header class="mt-10 mb-12">
-        <div class="flex justify-between items-center">
-          <a class="nonchalant " href="/">
-            <h1 class="text-xl font-bold">Shaun Chong</h1>
-          </a>
-          <nav class="flex gap-4 items-center">
-            <a href="/">{{ i18n.home }}</a>
-            <a href="/posts">{{ i18n.posts }}</a>
-            <a href="/feed.xml">{{ i18n.feed }}</a>
-          </nav>
-        </div>
-      </header>
+      {% include 'partials/header.liquid' %}
 
       <div class="mb-8 prose max-w-none">
         {{ content }}
@@ -43,19 +32,7 @@
         </p>
       {%- endif %}
 
-      <footer class="mt-12 border-t border-solid border-gray-500 py-6">
-        <div class="flex justify-between">
-          <p>
-            {{ i18n.builtWith }}
-            <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
-          </p>
-
-          <p>
-            &copy; {% year %}
-            {{ metadata.author.name }}
-          </p>
-        </div>
-      </footer>
+      {% include 'partials/footer.liquid' %}
     </div>
   </body>
 </html>

@@ -1,7 +1,9 @@
+{% assign i18n = languages[lang] %}
 <footer class="mt-12 border-t border-solid border-gray-500 py-6">
   <div class="flex justify-between">
     <p>
-      Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
+      {{ i18n.builtWith }}
+      <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
     </p>
 
     <p>
