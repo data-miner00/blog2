@@ -1,12 +1,11 @@
 {% assign i18n = languages[lang] %}
 <header class="mt-10 mb-12">
   <div class="flex justify-between items-center">
-    <a class="nonchalant " href="/">
-      <h1 class="text-xl font-bold">Shaun Chong</h1>
+    <a class="nonchalant" href="/">
+      <img src="/favicon-light.svg" alt="{{ metadata.author.name }}" class="w-10 h-10 inline-block">
     </a>
-    <nav class="flex gap-4 items-center">
-      <a href="/">{{ i18n.home }}</a>
-      <a href="/posts">{{ i18n.posts }}</a>
+    <nav class="flex gap-2 items-center text-black/50">
+      <a href="/">{{ i18n.home }}</a> / <a href="/posts">{{ i18n.posts }}</a> /
       <a href="/feed.xml">{{ i18n.feed }}</a>
     </nav>
   </div>

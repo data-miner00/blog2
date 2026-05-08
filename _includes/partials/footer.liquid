@@ -1,14 +1,13 @@
 {% assign i18n = languages[lang] %}
 <footer class="mt-12 border-t border-solid border-gray-500 py-6">
-  <div class="flex justify-between">
+  <div class="flex justify-between text-md text-black/60">
+    <p>
+      &copy; {% year %} |
+      {{ metadata.author.name }}
+    </p>
     <p>
       {{ i18n.builtWith }}
       <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
-    </p>
-
-    <p>
-      &copy; {% year %}
-      {{ metadata.author.name }}
     </p>
   </div>
 </footer>
