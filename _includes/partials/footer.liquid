@@ -6,8 +6,13 @@
       {{ metadata.author.name }}
     </p>
     <p>
-      {{ i18n.builtWith }}
+      {% if i18n.builtWith.position == 'before' %}
+        {{ i18n.builtWith.value }}
+      {% endif %}
       <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a>
+      {% if i18n.builtWith.position == 'after' %}
+        {{ i18n.builtWith.value }}
+      {% endif %}
     </p>
   </div>
 </footer>

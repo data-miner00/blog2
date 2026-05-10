@@ -5,7 +5,10 @@ module.exports = {
     feed: "Feed",
     previous: "Previous",
     next: "Next",
-    builtWith: "Built with",
+    builtWith: {
+      value: "Built with",
+      position: "before",
+    },
   },
   es: {
     home: "Inicio",
@@ -13,7 +16,10 @@ module.exports = {
     feed: "Feed",
     previous: "Anterior",
     next: "Siguiente",
-    builtWith: "Construido con",
+    builtWith: {
+      value: "Construido con",
+      position: "before",
+    },
   },
   fr: {
     home: "Accueil",
@@ -21,7 +27,10 @@ module.exports = {
     feed: "Feed",
     previous: "Précédent",
     next: "Suivant",
-    builtWith: "Construit avec",
+    builtWith: {
+      value: "Construit avec",
+      position: "before",
+    },
   },
   ko: {
     home: "홈",
@@ -29,7 +38,10 @@ module.exports = {
     feed: "피드",
     previous: "이전",
     next: "다음",
-    builtWith: "에 기반하여 구축됨",
+    builtWith: {
+      value: "로 구성됨",
+      position: "after",
+    },
   },
   ms: {
     home: "Halaman Utama",
@@ -37,7 +49,10 @@ module.exports = {
     feed: "Feed",
     previous: "Sebelumnya",
     next: "Seterusnya",
-    builtWith: "Dibina dengan",
+    builtWith: {
+      value: "Dibina dengan",
+      position: "before",
+    },
   },
   pt: {
     home: "Início",
@@ -45,7 +60,10 @@ module.exports = {
     feed: "Feed",
     previous: "Anterior",
     next: "Próximo",
-    builtWith: "Construido com",
+    builtWith: {
+      value: "Construído com",
+      position: "before",
+    },
   },
   zh: {
     home: "主页",
@@ -53,7 +71,10 @@ module.exports = {
     feed: "订阅源",
     previous: "上一篇",
     next: "下一篇",
-    builtWith: "搭建于",
+    builtWith: {
+      value: "搭建于",
+      position: "before",
+    },
   },
   ja: {
     home: "ホーム",
@@ -61,6 +82,9 @@ module.exports = {
     feed: "フィード",
     previous: "先",
     next: "次",
-    builtWith: "で構築",
+    builtWith: {
+      value: "で構築",
+      position: "after",
+    },
   },
 };
