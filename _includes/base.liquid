@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ title }}">
     <title>
       {{ title }}
     </title>
@@ -15,26 +16,28 @@
     <div class="mx-auto max-w-160 px-4">
       {% include 'partials/header.liquid' %}
 
-      <h1 class="mb-4 text-3xl font-bold">
-        {{ title }}
-      </h1>
+      <main>
+        <h1 class="mb-4 text-3xl font-bold">
+          {{ title }}
+        </h1>
 
-      <div class="mb-8 prose max-w-none">
-        {{ content }}
-      </div>
+        <div class="mb-8 prose max-w-none">
+          {{ content }}
+        </div>
 
-      {% assign previousPost = collections.post | getPreviousCollectionItem: page %}
-      {% assign nextPost = collections.post | getNextCollectionItem: page %}
-      {% if previousPost -%}
-        <p>
-          {{ i18n.previous }}: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
-        </p>
-      {%- endif %}
-      {% if nextPost -%}
-        <p>
-          {{ i18n.next }}: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-        </p>
-      {%- endif %}
+        {% assign previousPost = collections.post | getPreviousCollectionItem: page %}
+        {% assign nextPost = collections.post | getNextCollectionItem: page %}
+        {% if previousPost -%}
+          <p>
+            {{ i18n.previous }}: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+          </p>
+        {%- endif %}
+        {% if nextPost -%}
+          <p>
+            {{ i18n.next }}: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+          </p>
+        {%- endif %}
+      </main>
 
       {% include 'partials/footer.liquid' %}
     </div>
