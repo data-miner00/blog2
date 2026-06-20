@@ -10,7 +10,9 @@ title: Posts - Shaun Chong
   {% for item in recentPosts %}
     <li class="block">
       <a class="nonchalant flex justify-between items-center" href="{{ item.url }}">
-        <span class="block">{{ item.data.title }}</span>
+        <span class="block max-w-[30ch] md:max-w-full text-ellipsis overflow-hidden whitespace-nowrap">
+          {{- item.data.title -}}
+        </span>
         <span class="block text-gray-500">{{ item.data.date | dayMonth }}</span>
       </a>
     </li>
