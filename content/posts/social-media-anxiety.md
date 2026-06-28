@@ -1,5 +1,5 @@
 ---
-lang: en
+lang: fr
 title: Anxiété liée aux réseaux sociaux
 tags: post
 date: 2026-06-01
