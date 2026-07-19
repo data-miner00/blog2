@@ -17,7 +17,10 @@ title: Home - Shaun Chong
   <a target="_blank" href="{{ metadata.author.urls.x }}">X</a>.
 </p>
 
-<h2 class="font-bold mb-5">Recent Posts</h2>
+<div class="flex justify-between items-center mb-5">
+  <h2 class="font-bold">Recent Posts</h2>
+  <a href="/posts">See all posts</a>
+</div>
 
 <ul class="flex flex-col gap-2">
   {% assign recentPosts = collections.post | reverse | slice: 0, 10 %}
