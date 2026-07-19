@@ -38,8 +38,15 @@
           </p>
         {%- endif %}
 
-        <div class="mt-8">
+        <div class="mt-8 flex justify-between items-center">
           <p>{{ i18n.created }}: {{ date | i18nDate: lang }}</p>
+          <button
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="text-gray-500 underline cursor-pointer"
+            aria-label="Scroll to top"
+          >
+            ↑ {{ i18n.top }}
+          </button>
         </div>
       </main>
 

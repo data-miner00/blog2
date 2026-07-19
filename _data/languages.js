@@ -10,6 +10,7 @@ module.exports = {
       position: "before",
     },
     created: "Created",
+    top: "Top",
   },
   es: {
     home: "Inicio",
@@ -22,6 +23,7 @@ module.exports = {
       position: "before",
     },
     created: "Creado",
+    top: "Arriba",
   },
   fr: {
     home: "Accueil",
@@ -34,6 +36,7 @@ module.exports = {
       position: "before",
     },
     created: "Créé",
+    top: "Haut",
   },
   ko: {
     home: "홈",
@@ -46,6 +49,7 @@ module.exports = {
       position: "after",
     },
     created: "생성됨",
+    top: "위로",
   },
   ms: {
     home: "Halaman Utama",
@@ -58,6 +62,7 @@ module.exports = {
       position: "before",
     },
     created: "Dicipta",
+    top: "Atas",
   },
   pt: {
     home: "Início",
@@ -70,6 +75,7 @@ module.exports = {
       position: "before",
     },
     created: "Criado",
+    top: "Topo",
   },
   zh: {
     home: "主页",
@@ -82,6 +88,7 @@ module.exports = {
       position: "before",
     },
     created: "创建于",
+    top: "顶部",
   },
   ja: {
     home: "ホーム",
@@ -94,5 +101,6 @@ module.exports = {
       position: "after",
     },
     created: "作成日",
+    top: "トップ",
   },
 };
