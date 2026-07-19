@@ -48,6 +48,11 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("i18nDate", function (dateObj, lang = "en") {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Intl.DateTimeFormat(lang, options).format(dateObj);
+  });
+
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
   });

@@ -9,6 +9,7 @@ module.exports = {
       value: "Built with",
       position: "before",
     },
+    created: "Created",
   },
   es: {
     home: "Inicio",
@@ -20,6 +21,7 @@ module.exports = {
       value: "Construido con",
       position: "before",
     },
+    created: "Creado",
   },
   fr: {
     home: "Accueil",
@@ -31,6 +33,7 @@ module.exports = {
       value: "Construit avec",
       position: "before",
     },
+    created: "Créé",
   },
   ko: {
     home: "홈",
@@ -42,6 +45,7 @@ module.exports = {
       value: "로 구성됨",
       position: "after",
     },
+    created: "생성됨",
   },
   ms: {
     home: "Halaman Utama",
@@ -53,6 +57,7 @@ module.exports = {
       value: "Dibina dengan",
       position: "before",
     },
+    created: "Dicipta",
   },
   pt: {
     home: "Início",
@@ -64,6 +69,7 @@ module.exports = {
       value: "Construído com",
       position: "before",
     },
+    created: "Criado",
   },
   zh: {
     home: "主页",
@@ -75,6 +81,7 @@ module.exports = {
       value: "搭建于",
       position: "before",
     },
+    created: "创建于",
   },
   ja: {
     home: "ホーム",
@@ -86,5 +93,6 @@ module.exports = {
       value: "で構築",
       position: "after",
     },
+    created: "作成日",
   },
 };

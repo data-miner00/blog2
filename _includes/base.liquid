@@ -37,6 +37,10 @@
             {{ i18n.next }}: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
           </p>
         {%- endif %}
+
+        <div class="mt-8">
+          <p>{{ i18n.created }}: {{ date | i18nDate: lang }}</p>
+        </div>
       </main>
 
       {% include 'partials/footer.liquid' %}
