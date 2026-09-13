@@ -53,6 +53,10 @@ module.exports = function (eleventyConfig) {
     return new Intl.DateTimeFormat(lang, options).format(dateObj);
   });
 
+  eleventyConfig.addFilter("langName", (langCode) => {
+    return new Intl.DisplayNames(["en"], { type: "language" }).of(langCode);
+  });
+
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
   });

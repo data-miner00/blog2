@@ -9,11 +9,19 @@ title: Posts - Shaun Chong
   {% assign recentPosts = collections.post | reverse %}
   {% for item in recentPosts %}
     <li class="block">
-      <a class="nonchalant flex justify-between items-center" href="{{ item.url }}">
+      <a class="nonchalant flex justify-between items-center gap-2" href="{{ item.url }}">
         <span class="block max-w-[30ch] md:max-w-full text-ellipsis overflow-hidden whitespace-nowrap">
           {{- item.data.title -}}
         </span>
-        <span class="block text-gray-500">{{ item.data.date | dayMonth }}</span>
+        <span class="flex items-center gap-2 shrink-0 text-gray-500">
+          <span
+            class="text-xs uppercase tracking-wide border border-gray-400 rounded px-1.5 py-0.5"
+            title="{{ item.data.lang | langName }}"
+          >
+            {{- item.data.lang -}}
+          </span>
+          <span class="block">{{ item.data.date | dayMonth }}</span>
+        </span>
       </a>
     </li>
   {% else %}
