@@ -4,8 +4,14 @@
     class="flex flex-col items-center gap-2 text-center text-md text-black/60 sm:flex-row sm:justify-between sm:text-left"
   >
     <p>
-      &copy; {% year %} |
+      &copy; {% year %} ·
       {{ metadata.author.name }}
+      {% if build.commit %}
+        ·
+        <a href="{{ metadata.repository }}/commit/{{ build.commit }}">
+          {{- build.shortCommit -}}
+        </a>
+      {% endif %}
     </p>
     <p>
       {% if i18n.builtWith.position == 'before' %}

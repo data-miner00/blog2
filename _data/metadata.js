@@ -1,4 +1,5 @@
 var metadata = {
+  repository: "https://github.com/data-miner00/blog2",
   author: {
     name: "Shaun Chong",
     email: "mumk0313@gmail.com",
