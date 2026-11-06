@@ -1,0 +1,28 @@
+{%- comment -%}
+  Lucide "git-commit-horizontal" icon: https://lucide.dev/icons/git-commit-horizontal
+
+  Usage: {% render 'icons/git-commit-horizontal.liquid', size: 16, class: '...' %}
+  - size: width/height in px (default 24)
+  - class: extra classes for the <svg>
+
+  Uses currentColor, so it follows the surrounding text color.
+{%- endcomment -%}
+{%- assign size = size | default: 24 -%}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="{{ size }}"
+  height="{{ size }}"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="{{ class }}"
+  aria-hidden="true"
+>
+  <circle cx="12" cy="12" r="3" />
+  <line x1="3" x2="9" y1="12" y2="12" />
+  <line x1="15" x2="21" y1="12" y2="12" />
+</svg>
+{%- # Trims the file's trailing newline so no stray space follows the icon -%}

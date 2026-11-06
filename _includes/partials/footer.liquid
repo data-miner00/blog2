@@ -8,7 +8,8 @@
       {{ metadata.author.name }}
       {% if build.commit %}
         ·
-        <a href="{{ metadata.repository }}/commit/{{ build.commit }}">
+        <a href="{{ metadata.repository }}/commit/{{ build.commit }}" title="Last commit hash">
+          {%- render 'icons/git-commit-horizontal.liquid', size: 16, class: 'mr-1 inline align-[-0.15em]' -%}
           {{- build.shortCommit -}}
         </a>
       {% endif %}
